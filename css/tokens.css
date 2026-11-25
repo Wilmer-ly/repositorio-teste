@@ -1,0 +1,59 @@
+/* Tokens do Bora v2 ("figurinha") — origem: replica/design/tokens.json (contraste AA verificado). */
+
+/* Barlow e Barlow Condensed: SIL Open Font License (fonts/OFL.txt). */
+@font-face { font-family: 'Barlow'; src: url('../fonts/Barlow-Regular.woff') format('woff'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Barlow'; src: url('../fonts/Barlow-Medium.woff') format('woff'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Barlow'; src: url('../fonts/Barlow-SemiBold.woff') format('woff'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Barlow'; src: url('../fonts/Barlow-Bold.woff') format('woff'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Barlow Condensed'; src: url('../fonts/BarlowCondensed-Bold.woff') format('woff'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Barlow Condensed'; src: url('../fonts/BarlowCondensed-ExtraBold.woff') format('woff'); font-weight: 800; font-style: normal; font-display: swap; }
+
+:root {
+  /* base neutra: a cor fica para as partes do corpo */
+  --papel: #eef0f3;
+  --branco: #ffffff;
+  --preto: #000000;
+  --grafite: #4f5562;
+  --linha: #d7dbe2;
+  --linha-forte: #767d8a;
+  --foco: #1d6fe0;
+  --perigo: #c8102e;
+  --ok: #0a7d3c;
+  --ipe: #ffc51f;
+
+  /* tinta da arte e do texto fora de uma figurinha */
+  --kit: var(--branco);
+  --tinta: var(--preto);
+  --filtro-arte: brightness(0);
+  --botao: var(--preto);
+  --botao-tinta: var(--branco);
+
+  --font: 'Barlow', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-display: 'Barlow Condensed', 'Barlow', 'Arial Narrow', system-ui, sans-serif;
+  --fs-mini: 13px; --lh-mini: 16px;
+  --fs-p: 15px; --lh-p: 21px;
+  --fs-base: 17px; --lh-base: 25px;
+  --fs-md: 19px; --lh-md: 25px;
+  --fs-lg: 28px; --lh-lg: 30px;
+  --fs-xl: 38px; --lh-xl: 38px;
+  --fs-num: 52px; --lh-num: 48px;
+
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 20px; --s6: 24px; --s7: 32px; --s8: 40px; --s9: 48px;
+  --r-campo: 14px; --r-cartao: 20px; --r-figurinha: 22px; --r-folha: 28px; --r-pill: 999px;
+  --sombra-figurinha: 0 1px 1px rgba(0, 0, 0, .10), 0 10px 18px -12px rgba(0, 0, 0, .45);
+  --sombra-folha: 0 -8px 30px rgba(0, 0, 0, .18);
+  --rapido: 120ms; --medio: 220ms; --ease: cubic-bezier(.2, .8, .2, 1);
+  --max: 560px; --tabbar: 64px; --header: 56px; --toque: 48px;
+}
+
+/* Uniformes: uma cor por parte do corpo. --tinta = texto e arte em cima da cor. */
+[data-kit="aquecimento"] { --kit: #e8590c; --tinta: #000; --filtro-arte: brightness(0); --botao: #000; --botao-tinta: #fff; }
+[data-kit="cardio"] { --kit: #e02d4b; --tinta: #fff; --filtro-arte: none; --botao: #000; --botao-tinta: #fff; }
+[data-kit="pernas"] { --kit: #6a3bdb; --tinta: #fff; --filtro-arte: none; --botao: #000; --botao-tinta: #fff; }
+[data-kit="abdomen"] { --kit: #ffc51f; --tinta: #000; --filtro-arte: brightness(0); --botao: #000; --botao-tinta: #fff; }
+[data-kit="bracos"] { --kit: #1d6fe0; --tinta: #fff; --filtro-arte: none; --botao: #000; --botao-tinta: #fff; }
+[data-kit="costas"] { --kit: #0b7f3f; --tinta: #fff; --filtro-arte: none; --botao: #000; --botao-tinta: #fff; }
+[data-kit="alongamento"] { --kit: #6edcb9; --tinta: #000; --filtro-arte: brightness(0); --botao: #000; --botao-tinta: #fff; }
+[data-kit="corpo_todo"] { --kit: #cc2a86; --tinta: #fff; --filtro-arte: none; --botao: #000; --botao-tinta: #fff; }
+[data-kit="descanso"] { --kit: #cff3e6; --tinta: #000; --filtro-arte: brightness(0); --botao: #000; --botao-tinta: #fff; }
+[data-kit="desafio"] { --kit: #000; --tinta: #ffc51f; --filtro-arte: none; --botao: #ffc51f; --botao-tinta: #000; }

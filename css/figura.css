@@ -1,0 +1,21 @@
+/* Ilustrações animadas (arte.js): quadros empilhados; só o primeiro aparece quando parado. */
+.arte { position: relative; width: 100%; aspect-ratio: 1; }
+.arte img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain;
+  opacity: 0; filter: var(--filtro-arte); user-select: none; -webkit-user-drag: none; pointer-events: none;
+}
+.arte img.base { opacity: 1; }
+
+/* Figura própria (figura.js), pintada com a tinta da figurinha */
+.figura { display: block; width: 100%; height: auto; overflow: hidden; }
+.figura .fig-chao { stroke: var(--tinta); stroke-width: 2; stroke-linecap: round; opacity: .35; }
+.figura .fig-tapete { fill: var(--tinta); opacity: .14; }
+.figura .fig-parede, .figura .fig-cadeira { fill: var(--tinta); opacity: .28; }
+.figura .fig-membro, .figura .fig-tronco { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.figura .fig-membro { stroke-width: 9; }
+.figura .fig-perna { stroke-width: 10; }
+.figura .fig-tronco { stroke-width: 15; }
+.figura .fig-perto, .figura .fig-hl { stroke: var(--tinta); fill: var(--tinta); }
+.figura .fig-longe, .figura .fig-hl-longe { stroke: var(--tinta); fill: var(--tinta); opacity: .5; }
+.figura polyline.fig-perto, .figura polyline.fig-longe, .figura polyline.fig-hl, .figura polyline.fig-hl-longe { fill: none; }
+.figura .fig-cabeca { fill: var(--tinta); }
